@@ -1,0 +1,33 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+
+    <div class='panel-body'>
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='enrollments && enrollments.length'>
+                <thead>
+                    <tr>
+                        <th>Panther ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let enrollment of enrollments'>
+                        <td>{{ enrollment.PantherID }}</td>
+                        <td>{{ enrollment.FirstName }}</td>
+                        <td>{{ enrollment.LastName }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-8">
+            <a [routerLink]="['/schedule']" class="btn btn-link">Cancel</a>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+     <div class="panel-heading">
+        <h1>Welcome, {{currentUser[0].FirstName}}!</h1>
+    </div>
+
+    <div class="panel-body">
+        <div class='row'></div>
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='tickets && tickets.length'>
+                <thead>
+                    <tr>
+                        <th>Ticket</th>
+                        <th>Description</th>
+                        <th>Date Submitted</th>
+                        <th>Status</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let ticket of tickets'>
+                        <td>{{ ticket.TicketID }}</td>
+                        <td>{{ ticket.Description }}</td>
+                        <td>{{ ticket.TimeStamp }}</td>
+                        <td>{{ ticket.Status }}</td>
+                        <td width=300> 
+                            <a class="btn btn-info" routerLink="/detail/{{ticket.TicketID}}">Detail</a> 
+                            <a class="btn btn-success" routerLink="/respond/{{ticket.TicketID}}">Respond</a>
+                            <a class="btn btn-danger" (click)="alert(ticket.TicketID)">Close Ticket</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button [routerLink]="['/schedule']" class="btn btn-primary">Schedule</button>
+        <button [routerLink]="['/addTicket']" class="btn btn-primary" >Create Ticket</button>
+        <div class="col-md-6 col-md-offset-10">
+            <p><a [routerLink]="['/login']">Logout</a></p>
+        </div>
+    </div>   
+</div>

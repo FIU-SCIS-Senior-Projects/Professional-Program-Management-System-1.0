@@ -1,0 +1,52 @@
+<div class="panel panel-primary" *ngIf=ticket>
+<div class="panel-heading">
+        Ticket # {{ticket.TicketID}}
+</div>
+      <div class="panel-body">
+      <form class="form-horizontal" >
+
+        <div class="form-group">
+          <label for="description" class="col-sm-2 control-label">Description</label>
+          <div class="col-sm-9">
+            <p class="form-control">{{ticket.Description}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="department" class="col-sm-2 control-label">Submitted Date : </label>
+          <div class="col-sm-9">
+          <p class="form-control">{{ticket.TimeStamp}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="salary" class="col-sm-2 control-label">Status : </label>
+          <div class="col-sm-9">
+            <p class="form-control">{{ticket.Status}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="id" class="col-sm-2 control-label">Responses: </label>
+          <div class="col-sm-9">
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let response of responses'>
+                        <td><p class="form-control">{{response.Description}}</p></td>
+                        <td><p class="form-control">{{response.TimeStamp}}</p></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-8">
+            <a [routerLink]="['/guestPage']" class="btn btn-link">Cancel</a>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

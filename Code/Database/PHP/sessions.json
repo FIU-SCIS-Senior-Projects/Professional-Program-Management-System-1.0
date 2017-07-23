@@ -1,0 +1,37 @@
+[
+    {
+        "sessionId": 1,
+        "sessionName": "Leaf Rake",
+        "sessionCode": "GDN-0011",
+        "sessionDate": "March 19, 2016",
+        "description": "Leaf rake with 48-inch wooden handle.",
+    },
+    {
+        "sessionId": 2,
+        "sessionName": "Garden Cart",
+        "sessionCode": "GDN-0023",
+        "sessionDate": "March 18, 2016",
+        "description": "15 gallon capacity rolling garden cart",
+    },
+    {
+        "sessionId": 5,
+        "sessionName": "Hammer",
+        "sessionCode": "TBX-0048",
+        "sessionDate": "May 21, 2016",
+        "description": "Curved claw steel hammer",
+    },
+    {
+        "sessionId": 8,
+        "sessionName": "Saw",
+        "sessionCode": "TBX-0022",
+        "sessionDate": "May 15, 2016",
+        "description": "15-inch steel blade hand saw",
+    },
+    {
+        "sessionId": 10,
+        "sessionName": "Video Game Controller",
+        "sessionCode": "GMG-0042",
+        "sessionDate": "October 15, 2015",
+        "description": "Standard two-button video game controller",
+    }
+]
